@@ -14,7 +14,7 @@ function solution(s) {
 
     return isNum;
 
-    // 로직상 한줄로도 가능한 코드 ⭐ 알아두기
+    // 로직 상 한줄로도 가능한 코드 ⭐ 알아두기
 //    return s.length == 4 || s.length == 6 ? !isNaN(s) : false
     // 하지만 11번 테케에서 틀린다. ("1e22") 왜냐하면, 1e22 자체를 isNaN(숫자가 아닌가?)으로 검사하면, 지수의 과학적 표기법이라
     // 숫자로 인식되기 때문에 false 가 되어버린다.
