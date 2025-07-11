@@ -44,7 +44,7 @@ def DFS(target, current, len_word, len_wordlist,visited, words, index, cnt) :
         DFS(target, next, len_word, len_wordlist, visited, words, i, cnt+1)
         visited[i] = False
     
-    count = 0 # 이게 맞으려나? 
+    # count = 0 # 이게 맞으려나? 
     return 0
 
 

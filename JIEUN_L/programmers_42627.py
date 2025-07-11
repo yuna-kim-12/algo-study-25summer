@@ -11,7 +11,7 @@
 #   heap에 하나도 남지 않을 때 까지 반복
 # 
 
-from heapq import heapify, heappop
+from heapq import heapify, heappop, heappush
 
 def solution(jobs):
     answer = 0 # 총 작업 시간을 여기에 더할 예정
@@ -21,26 +21,31 @@ def solution(jobs):
         jobs[i].append(i)
     
     # jobs : 작업이 요청되는 시간, 작업 소요 시간, 작업 번호
+    jobs.sort() 
 
-    heapify(jobs)
-    
-    
-    while jobs:
-        cur_job = heappop(jobs)
-        print(cur_job)
-        if current_time >= cur_job[0] :
-            print("case 1, current_time : ", current_time+cur_job[1]," job_cnt : ",  (cur_job[0]-current_time)+cur_job[1])
-            current_time += cur_job[1]
-            
-            job_cnt += (current_time-cur_job[0])+cur_job[1]
+    # 작업 시간, 요청 시간, 일 순으로 heap에 집어넣음.)
+    h = []
+    heapify(h)
+    # current_time = jobs[index][0]
+
+    while index < job_cnt or h : 
+        while index < job_cnt and jobs[index][0] <= current_time : 
+            heappush(h, [jobs[index][1],jobs[index][0],jobs[index][2]] )
+            print(h)
+            index += 1
+
+        if h : 
+            cur_job = heappop(h)
+            current_time += cur_job[0]
+            answer += current_time-cur_job[1]
+            print(f"current_time = {current_time}, answer = {answer}, cur_job = {cur_job}")
+        
         else : 
-            current_time = cur_job[0]+ cur_job[1]
-            job_cnt += cur_job[1]
-    
-    print(job_cnt)
+            current_time = jobs[index][0]
+            
+            
+    print(f"totoal answer = {answer}")
+    return answer //job_cnt
 
 
-    return answer
-
-
-solution([[0, 3], [1, 9], [3, 5]])
+print(solution([[0, 3], [100, 9], [101, 8]]))
