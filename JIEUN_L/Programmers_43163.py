@@ -20,29 +20,32 @@ def DFS(target, current, len_word, len_wordlist,visited, words, index, cnt) :
     global count
     if current == target : 
         count = min(count, cnt)
-        print("current == target and the count is", count, cnt)
+        # print("current == target and the count is", count, cnt)
         return 
     if cnt == len_wordlist : 
-        print("cnt == len_wordlist")
+        # print("cnt == len_wordlist")
         count = 0
         return 
     
-    wrong = False
+    
     next = ""
     for i in range(len_wordlist) :
-        print(i, " is the current index")
+        wrong = 0
+        print(f"{i} is the current index and {current} is current word")
         if visited[i] : #방문한 적이 있다면 pass 
             continue
         next = words[i] # 매번 주소값 2번 참조하기보단 그냥 할당해버림.. 두번 참조하는게 나으려나
         for j in range(len_word) : 
             if current[j] != next[j] :
-                if wrong :
-                    continue 
-                wrong = True
-        
-        visited[i] = True           
-        DFS(target, next, len_word, len_wordlist, visited, words, i, cnt+1)
-        visited[i] = False
+                wrong += 1
+                if wrong > 1 :
+                    break 
+                
+        if wrong == 1: 
+            print(f"here we are, wrong 1, and heading to {words[i]}")
+            visited[i] = True           
+            DFS(target, next, len_word, len_wordlist, visited, words, i, cnt+1)
+            visited[i] = False
     
     # count = 0 # 이게 맞으려나? 
     return 0
@@ -56,5 +59,7 @@ def solution(begin, target, words):
         DFS(target, begin, len(begin), len(words), [False]*len(words), words,0, 0)
         return count
     
-words = ["hot", "dot", "dog", "lot", "log", "cog"]	
-print(solution("hit", "cog", words))
+words = ["hit", "hot"]
+print(solution("hut", "hot", words))
+# words = ["hot", "dot", "dog", "lot", "log", "cog"]
+# print(solution("hit", "cog", words))
