@@ -20,27 +20,50 @@ def make_map(rectangle) :
             for k in range(rectangle[i][0],rectangle[i][2]+1) : 
 
                 if j == rectangle[i][1] or j==rectangle[i][3] or k==rectangle[i][0]or k==rectangle[i][2] : 
-                    base_map[k][j] = 1
-                else :
+                    if base_map[k][j]  == 0 :
+                        pass
+                    else : 
+                        base_map[k][j] = 1
+                else : 
                     base_map[k][j] = 0
+        # # 디버깅 용 프린트 문
+        # for i in range(0,50) : 
+        #     for j in range(0,50) : 
+        #         print(base_map[i][j], end="")
+        #     print()
+        # print()
+        # print()
+
     return base_map
+def debug_map(base_map) : 
+    # # 디버깅 용 프린트 문
+    for i in range(0,50) : 
+        for j in range(0,50) : 
+            print(base_map[i][j], end="")
+        print()
+    print()
+    print()
+    
+    return 
 
 
 def BFS(base_map,characterX, characterY, itemX, itemY) : 
     q = deque([(characterX, characterY)])
-    # print(q)
+    base_map[characterX][characterY] = 2
+    print(q)
     direction = ((0, 1), (1, 0),(-1, 0), (0, -1))
     while q : 
         current = q.popleft()
         print(current)
-        base_map[current[0]][current[1]] += 1
-        if current[0] == itemX and current[0] == itemY :
+        if current[0] == itemY and current[1] == itemX :
+            print("we Fouuuuuuund!!!")
             return base_map[itemX][itemY] 
         for dir in direction : 
             next_x = current[0] + dir[0]
             next_y = current[1] + dir[1]
             print(f"next_x, next_y, basemap = {next_x}, {next_y}, {base_map[next_x][next_y]}")
             if next_x >= 0 and next_x <= 49 and next_y >= 0 and next_y <= 49 and base_map[next_x][next_y] == 1 :
+                base_map[next_x][next_y] = base_map[current[0]][current[1]]+1
                 print(f"next_x, next_y = {next_x}, {next_y}")
                 q.append((next_x, next_y))
     return  
@@ -48,11 +71,13 @@ def BFS(base_map,characterX, characterY, itemX, itemY) :
 def solution(rectangle, characterX, characterY, itemX, itemY):
     answer = 0
     map = make_map(rectangle)
-    print(map)
+    # print(map)
     answer = BFS(map,characterX, characterY, itemX, itemY)
+    debug_map(map)
     print(answer)
     return answer-2
 
+# 우하x 좌하y 우상x 우상 y
 solution([[1,1,7,4],[3,2,5,5],[4,3,6,9],[2,6,8,8]], 1, 3, 7, 8)
 
 

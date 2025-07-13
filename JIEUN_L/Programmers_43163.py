@@ -31,7 +31,7 @@ def DFS(target, current, len_word, len_wordlist,visited, words, index, cnt) :
     next = ""
     for i in range(len_wordlist) :
         wrong = 0
-        print(f"{i} is the current index and {current} is current word")
+        # print(f"{i} is the current index and {current} is current word")
         if visited[i] : #방문한 적이 있다면 pass 
             continue
         next = words[i] # 매번 주소값 2번 참조하기보단 그냥 할당해버림.. 두번 참조하는게 나으려나
@@ -42,7 +42,7 @@ def DFS(target, current, len_word, len_wordlist,visited, words, index, cnt) :
                     break 
                 
         if wrong == 1: 
-            print(f"here we are, wrong 1, and heading to {words[i]}")
+            # print(f"here we are, wrong 1, and heading to {words[i]}")
             visited[i] = True           
             DFS(target, next, len_word, len_wordlist, visited, words, i, cnt+1)
             visited[i] = False
