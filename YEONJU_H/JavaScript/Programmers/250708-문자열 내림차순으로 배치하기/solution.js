@@ -4,3 +4,4 @@ function solution(s) {
     return s.split("").sort().reverse().join("");
 }
 
+// 기본적으로 sort() 하면 대문자가 우선. 
