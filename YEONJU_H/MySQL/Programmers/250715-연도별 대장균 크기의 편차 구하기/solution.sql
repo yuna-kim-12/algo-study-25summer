@@ -8,7 +8,7 @@
 # 개선 코드 : 윈도우 함수 사용
 SELECT
     YEAR(DIFFERENTIATION_DATE) AS YEAR,
-    -- (연도를 기준으로 나눈 파티션 내에서 가장 큰 콜로니수) - (각 튜블의 콜로니 수)
+    -- (연도를 기준으로 나눈 파티션 내에서 가장 큰 콜로니수) - (각 튜플의 콜로니 수)
     MAX(SIZE_OF_COLONY) OVER (PARTITION BY YEAR(DIFFERENTIATION_DATE)) - SIZE_OF_COLONY AS YEAR_DEV,
     ID
 FROM ECOLI_DATA
