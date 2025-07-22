@@ -1,9 +1,11 @@
-def solution(array, commands):
-    answer = []
-    for i in range(len(commands)) :
-        array_com = array[commands[i][0]-1:commands[i][1]]
-        array_com.sort()
-        answer.append(array_com[commands[i][2]-1])
+from itertools import permutations
+def solution(numbers):
+    answer = ''
+    comb = list(permutations(numbers, len(numbers)))
+    comb.sort(reverse=True)
+    for i in range(len(comb[0])) : 
+        answer += comb[0][i]
+    # print(answer)
     return answer
 
-print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
+solution(["6", "10", "2"])
