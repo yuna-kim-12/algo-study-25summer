@@ -2,13 +2,53 @@ package SWEA2383;
 import java.util.*;
 import java.io.*;
 
+class Person {
+    int r,c,sr,sc,dis,sk;
+    Person(int r, int c) {
+        this.r = r;
+        this.c = c;
+    }
+
+    public void setStairs(int sr, int sc, int sk) {
+        this.sr = sr;
+        this.sc = sc;
+        this.dis = Math.abs(r - sr) + Math.abs(c - sc);
+        this.sk = sk;
+    }
+
+    public void oneStepDown() {
+        sk--;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{pos=(" + r + "," + c + "), stair=(" + sr + "," + sc + "), dis=" + dis + ", sk=" + sk + "}";
+    }
+
+}
+
+class Stair {
+    int sr,sc,k,pNum;
+    Stair(int sr, int sc, int k) {
+        this.sr = sr;
+        this.sc = sc;
+        this.k = k;
+        pNum = 0;
+    }
+}
+
 class Solution {
+
+    static ArrayList<Person> persons = new ArrayList<Person>(10);
+    static ArrayList<Stair> stairs = new ArrayList<Stair>(2);
+    static int N, minTime;
     public static void main(String args[]) throws Exception {
         /*
+            https://swexpertacademy.com/main/solvingProblem/solvingProblem.do
             N*N 크기의 정사각형 모양의 방에 사람들이 앉아 있음.
             점심을 먹기 위해 아래 층으로 내려가야 하는데, 밥을 빨리 먹기위해 최대한 빠른 시간 내에 내려가야
             - P : 방 안의 사람
-            - S : 계단 입구W
+            - S : 계단 입구
 
             이동 완료 시간 = 모든 사람들이 계단을 내려가 아래 층으로 이동을 완료한 시간
             사람들이 아래층으로 이동하는 시간은 계단 입구까지 이동 시간과 계단을 내려가는 시간이 포함됨
@@ -30,14 +70,159 @@ class Solution {
             이 때, 소요 시간을 출력하는 프로그램 작성
 
             [ IDEA ]
-            1)
+            0) 사람 노드와 계단 노드 각각 필요
+            (1) 사람 노드 : 현 위치, 가장 가까운 계단의 위치, 계단까지의 거리
+            (2) 계단 노드 : 계단의 길이, 현재 계단을 내려가고 있는 사람 수
+            - 조건 : 최대 3명
+            - 계단 길이 : K / 계단 내려갈 때 K 분 소요
 
+            1) 각각의 사람, 가장 가까운 계단 찾기
+            (1) 1분씩 이동하면서, 그 방향으로 움직이는 로직 넣기
+
+            2) 전반적인 방법
+            - 1분마다 사람을 이동시키고, 계단의 상태를 변화시키면서 사람을 내려보낸다.
+            - 이때 계단에 올라가는 사람의 순서는 상관 없다.
+            - 소요 시간을 count 하는 static 변수 지정
+            - 계단이 최대 2가지 이므로, 사람별로 ^2 개로 나눈다. 계단 길이가 변수가 될 수 있음.
+            - 사람과 계단의 정보를 입력하는 로직, 사람을 나누는 로직, 1분마다 처리 로직,
          */
 
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            StringTokenizer st;
 
 
+            int T = Integer.parseInt(br.readLine());
+            int t = 0;
+
+            while(t++ < T) {
+                persons.clear();
+                stairs.clear();
+                minTime = Integer.MAX_VALUE;
+
+                N = Integer.parseInt(br.readLine());
+                int[][] map = new int[N][N];
+
+                for(int i = 0; i < N; i++) {
+                    st = new StringTokenizer(br.readLine());
+                    for(int j = 0; j < N; j++) {
+                        map[i][j] = Integer.parseInt(st.nextToken());
+                        if(map[i][j] == 1) {
+                            persons.add(new Person(i,j));
+                        } else if( map[i][j] > 1) {
+                            stairs.add(new Stair(i,j,map[i][j]));
+                        }
+                    }
+                }
+
+                // System.out.println(Arrays.deepToString(map));
+                // 입력 완료
+
+                // combi
+                combi(0);
+                System.out.println("#" + t + " " + minTime);
+            }
 
 
+    }
 
+    public static void combi(int p) {
+
+        if( p == persons.size()) {
+            simulate();
+            return;
+        }
+
+
+//        System.out.println("stairs.get(0).k" + stairs.get(0).k);
+        persons.get(p).setStairs(stairs.get(0).sr, stairs.get(0).sc, stairs.get(0).k);
+        combi(p + 1);
+
+//        System.out.println("stairs.get(1).k" + stairs.get(1).k);
+        persons.get(p).setStairs(stairs.get(1).sr, stairs.get(1).sc, stairs.get(1).k);
+        combi(p + 1);
+    }
+
+    public static void simulate() {
+        List<Person> copyPersons = new ArrayList<>();
+        for (Person p : persons) {
+            Person cp = new Person(p.r, p.c);
+            cp.setStairs(p.sr, p.sc, p.sk);  // 복사해서 동일한 계단 정보 넣기
+            copyPersons.add(cp);
+        }
+
+        List<Person> stairOne = new ArrayList<>();
+        List<Person> stairTwo = new ArrayList<>();
+
+        for(Person p : copyPersons) {
+            if(p.sr == stairs.get(0).sr && p.sc == stairs.get(0).sc ) {
+                stairOne.add(p);
+            } else {
+                stairTwo.add(p);
+            }
+        }
+
+        int stairOneTime = simulateStair(stairOne);
+        int stairTwoTime = simulateStair(stairTwo);
+
+        minTime = Math.min(minTime, Math.max(stairOneTime, stairTwoTime));
+    }
+
+
+    public static int simulateStair(List<Person> stairPersons) {
+        List<Person> onStair = new ArrayList<>();  // 계단 이용 중 (최대 3명)
+        int time = 0;
+        if(stairPersons.isEmpty()) {
+            return 0;  // 바로 0 반환
+        }
+        while(true) {
+            time++;
+
+//            System.out.println("=== Time: " + time + " ===");
+//            System.out.println("Waiting: " + stairPersons.size() + ", OnStair: " + onStair.size());
+//
+            // 1. 계단에서 내려가기
+//            System.out.println("time: " + time);
+
+            for(int i = onStair.size() - 1; i >= 0; i--) {
+//                System.out.println("onStair.get("+ i + ").sk : " + onStair.get(i).sk);
+                if(onStair.get(i).sk > 0) {
+                    onStair.get(i).sk--;
+                }
+                if(onStair.get(i).sk == 0) {
+//                    System.out.println("Person finished stair!");
+                    onStair.remove(i);
+                }
+            }
+
+            // 2. 도착한 사람들 중 계단에 들어갈 수 있는 사람 추가
+            for(int i = stairPersons.size() - 1; i >= 0; i--) {
+                if(stairPersons.get(i).dis + 1 <= time && onStair.size() < 3) {
+                    onStair.add(stairPersons.get(i));
+                    stairPersons.remove(i);
+                }
+            }
+
+            if(stairPersons.isEmpty() && onStair.isEmpty()) {
+                return time;
+            }
+        }
+
+//
+//        int time = 0;
+//        while(true) {
+//            if(stairPersons.size() == 0) {
+//                return time;
+//            }
+//            for(int i = 0; i < 3; i++) {
+//                if(stairPersons.size() == 0) {
+//                    return time;
+//                }
+//                stairPersons.get(i).sk--;
+//                if(stairPersons.get(i).sk == 0) {
+//                    stairPersons.remove(i);
+//                }
+//            }
+//            time++;
+//        }
     }
 }
