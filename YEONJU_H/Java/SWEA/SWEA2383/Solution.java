@@ -16,10 +16,6 @@ class Person {
         this.sk = sk;
     }
 
-    public void oneStepDown() {
-        sk--;
-    }
-
     @Override
     public String toString() {
         return "Person{pos=(" + r + "," + c + "), stair=(" + sr + "," + sc + "), dis=" + dis + ", sk=" + sk + "}";
@@ -133,16 +129,15 @@ class Solution {
         }
 
 
-//        System.out.println("stairs.get(0).k" + stairs.get(0).k);
         persons.get(p).setStairs(stairs.get(0).sr, stairs.get(0).sc, stairs.get(0).k);
         combi(p + 1);
 
-//        System.out.println("stairs.get(1).k" + stairs.get(1).k);
         persons.get(p).setStairs(stairs.get(1).sr, stairs.get(1).sc, stairs.get(1).k);
         combi(p + 1);
     }
 
     public static void simulate() {
+        // ##### 중요 ! 복사해서 사용해야, sk 값이 꼬이지 않는다 !!!!
         List<Person> copyPersons = new ArrayList<>();
         for (Person p : persons) {
             Person cp = new Person(p.r, p.c);
@@ -153,7 +148,7 @@ class Solution {
         List<Person> stairOne = new ArrayList<>();
         List<Person> stairTwo = new ArrayList<>();
 
-        for(Person p : copyPersons) {
+        for(Person p : persons) {
             if(p.sr == stairs.get(0).sr && p.sc == stairs.get(0).sc ) {
                 stairOne.add(p);
             } else {
@@ -177,19 +172,11 @@ class Solution {
         while(true) {
             time++;
 
-//            System.out.println("=== Time: " + time + " ===");
-//            System.out.println("Waiting: " + stairPersons.size() + ", OnStair: " + onStair.size());
-//
-            // 1. 계단에서 내려가기
-//            System.out.println("time: " + time);
-
             for(int i = onStair.size() - 1; i >= 0; i--) {
-//                System.out.println("onStair.get("+ i + ").sk : " + onStair.get(i).sk);
                 if(onStair.get(i).sk > 0) {
                     onStair.get(i).sk--;
                 }
                 if(onStair.get(i).sk == 0) {
-//                    System.out.println("Person finished stair!");
                     onStair.remove(i);
                 }
             }
@@ -207,22 +194,5 @@ class Solution {
             }
         }
 
-//
-//        int time = 0;
-//        while(true) {
-//            if(stairPersons.size() == 0) {
-//                return time;
-//            }
-//            for(int i = 0; i < 3; i++) {
-//                if(stairPersons.size() == 0) {
-//                    return time;
-//                }
-//                stairPersons.get(i).sk--;
-//                if(stairPersons.get(i).sk == 0) {
-//                    stairPersons.remove(i);
-//                }
-//            }
-//            time++;
-//        }
     }
 }
