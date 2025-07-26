@@ -1,4 +1,4 @@
-package SWEA2383;
+package D250725SWEA2383;
 import java.util.*;
 import java.io.*;
 
@@ -35,10 +35,10 @@ class Stair {
 
 class Solution {
 
-    static ArrayList<Person> persons = new ArrayList<Person>(10);
-    static ArrayList<Stair> stairs = new ArrayList<Stair>(2);
+    static ArrayList<Person> persons = new ArrayList<>(10);
+    static ArrayList<Stair> stairs = new ArrayList<>(2);
     static int N, minTime;
-    public static void main(String args[]) throws Exception {
+    public static void main(String[] args) throws Exception {
         /*
             https://swexpertacademy.com/main/solvingProblem/solvingProblem.do
             N*N 크기의 정사각형 모양의 방에 사람들이 앉아 있음.
@@ -148,7 +148,7 @@ class Solution {
         List<Person> stairOne = new ArrayList<>();
         List<Person> stairTwo = new ArrayList<>();
 
-        for(Person p : persons) {
+        for(Person p : copyPersons) {
             if(p.sr == stairs.get(0).sr && p.sc == stairs.get(0).sc ) {
                 stairOne.add(p);
             } else {
