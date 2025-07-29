@@ -7,6 +7,8 @@ public class Solution {
     static int[][] film;
     static int D,W,K,minNum;
     public static void main(String[] args) throws IOException {
+
+
         /*
             [ 문제 요약 ]
             단면의 모든 세로방향에 대해 동일한 특성의 셀들이 K개 이상 연속되어야 성능검사 통과

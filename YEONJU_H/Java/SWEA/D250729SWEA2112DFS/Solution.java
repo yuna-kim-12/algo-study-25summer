@@ -10,22 +10,7 @@ public class Solution {
     static int[][] film;
     static int D,W,K,minNum;
     public static void main(String[] args) throws IOException {
-        /*
-            [ 문제 요약 ]
-            단면의 모든 세로방향에 대해 동일한 특성의 셀들이 K개 이상 연속되어야 성능검사 통과
-            약품은 막 별로 투입 가능 / 투입하는 막의 모든 셀들은 하나의 특성으로 변경 (가로 방향)
-            특성 A = 0 , 특성 B = 1
-            D = 보호 필름의 두께
-            W = 필름의 가로 크기
-            K = 합격 기준
 
-            [ 구해야할 것 ]
-            성능 검사 통과를 위한 최소 약품 투입 횟수
-
-            [ 아이디어 ]
-            - 이전 풀이를 DFS 방식으로 재풀이
-
-        */
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
@@ -39,7 +24,7 @@ public class Solution {
             K = Integer.parseInt(st.nextToken());
             usedMedicine = 0;
             film = new int[D][W];
-            minNum = 0;
+            minNum = Integer.MAX_VALUE;
 
             for(int r = 0; r < D; r++) {
                 st = new StringTokenizer(br.readLine());
@@ -73,7 +58,7 @@ public class Solution {
         }
 
         // 현재 막 건드리지 않음
-        DFS(depth, usedMedicine);
+        DFS(depth + 1, usedMedicine);
 
         int[] original = film[depth].clone();
 
