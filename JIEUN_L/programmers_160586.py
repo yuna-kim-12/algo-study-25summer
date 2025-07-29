@@ -40,7 +40,6 @@ def solution(keymap, targets):
     for i in range(len(keymap)) : 
         for j in range(len(keymap[i])) :
             keys[keymap[i][j]] = min(keys[keymap[i][j]], j+1)
-    print(keys)
 
     for i in range(len(targets)) : 
         temp = 0
@@ -51,7 +50,6 @@ def solution(keymap, targets):
             temp += keys[k]
         answer[i] = temp
 
-    print(answer)
     return answer
 
 
