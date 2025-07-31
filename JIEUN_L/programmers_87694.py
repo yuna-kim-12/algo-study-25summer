@@ -20,12 +20,12 @@ def make_map(rectangle) :
             for k in range(rectangle[i][0],rectangle[i][2]+1) : 
 
                 if j == rectangle[i][1] or j==rectangle[i][3] or k==rectangle[i][0]or k==rectangle[i][2] : 
-                    if base_map[k][j]  == 0 :
+                    if base_map[j][k]  == 0 :
                         pass
                     else : 
-                        base_map[k][j] = 1
+                        base_map[j][k] = 1
                 else : 
-                    base_map[k][j] = 0
+                    base_map[j][k] = 0
         # # 디버깅 용 프린트 문
         # for i in range(0,50) : 
         #     for j in range(0,50) : 
@@ -48,8 +48,8 @@ def debug_map(base_map) :
 
 
 def BFS(base_map,characterX, characterY, itemX, itemY) : 
-    q = deque([(characterX, characterY)])
-    base_map[characterX][characterY] = 2
+    q = deque([(characterY, characterX)])
+    base_map[characterY][characterX] = 2
     print(q)
     direction = ((0, 1), (1, 0),(-1, 0), (0, -1))
     while q : 
@@ -57,7 +57,7 @@ def BFS(base_map,characterX, characterY, itemX, itemY) :
         print(current)
         if current[0] == itemY and current[1] == itemX :
             print("we Fouuuuuuund!!!")
-            return base_map[itemX][itemY] 
+            return base_map[itemY][itemX] 
         for dir in direction : 
             next_x = current[0] + dir[0]
             next_y = current[1] + dir[1]
@@ -78,7 +78,8 @@ def solution(rectangle, characterX, characterY, itemX, itemY):
     return answer-2
 
 # 우하x 좌하y 우상x 우상 y
-solution([[1,1,7,4],[3,2,5,5],[4,3,6,9],[2,6,8,8]], 1, 3, 7, 8)
+# solution([[1, 1, 8, 4], [2, 2, 4, 9], [3, 6, 9, 8], [6, 3, 7, 7]], 9, 7, 6, 1)
+solution([[1, 1, 7, 4], [3, 2, 5, 5], [4, 3, 6, 9], [2, 6, 8, 8]], 1, 3, 7, 8)
 
 
 
