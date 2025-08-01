@@ -50,36 +50,37 @@ def debug_map(base_map) :
 def BFS(base_map,characterX, characterY, itemX, itemY) : 
     q = deque([(characterY, characterX)])
     base_map[characterY][characterX] = 2
-    print(q)
+    # print(q)
     direction = ((0, 1), (1, 0),(-1, 0), (0, -1))
     while q : 
         current = q.popleft()
-        print(current)
+        # print(current)
         if current[0] == itemY and current[1] == itemX :
-            print("we Fouuuuuuund!!!")
+            # print("we Fouuuuuuund!!!")
             return base_map[itemY][itemX] 
         for dir in direction : 
-            next_x = current[0] + dir[0]
-            next_y = current[1] + dir[1]
-            print(f"next_x, next_y, basemap = {next_x}, {next_y}, {base_map[next_x][next_y]}")
-            if next_x >= 0 and next_x <= 49 and next_y >= 0 and next_y <= 49 and base_map[next_x][next_y] == 1 :
-                base_map[next_x][next_y] = base_map[current[0]][current[1]]+1
-                print(f"next_x, next_y = {next_x}, {next_y}")
-                q.append((next_x, next_y))
+            next_y = current[0] + dir[0]  # Y 좌표로 수정
+            next_x = current[1] + dir[1]  # X 좌표로 수정
+            # print(f"next_y, next_x, basemap = {next_y}, {next_x}, {base_map[next_y][next_x]}")
+            if next_y >= 0 and next_y <= 49 and next_x >= 0 and next_x <= 49 and base_map[next_y][next_x] == 1 :
+                base_map[next_y][next_x] = base_map[current[0]][current[1]]+1
+                # print(f"next_y, next_x = {next_y}, {next_x}")
+                q.append((next_y, next_x))
     return  
 
 def solution(rectangle, characterX, characterY, itemX, itemY):
     answer = 0
     map = make_map(rectangle)
+    # debug_map(map)
     # print(map)
     answer = BFS(map,characterX, characterY, itemX, itemY)
-    debug_map(map)
-    print(answer)
+    # debug_map(map)
+    # print(answer)
     return answer-2
 
 # 우하x 좌하y 우상x 우상 y
-# solution([[1, 1, 8, 4], [2, 2, 4, 9], [3, 6, 9, 8], [6, 3, 7, 7]], 9, 7, 6, 1)
-solution([[1, 1, 7, 4], [3, 2, 5, 5], [4, 3, 6, 9], [2, 6, 8, 8]], 1, 3, 7, 8)
+solution([[1, 1, 8, 4], [2, 2, 4, 9], [3, 6, 9, 8], [6, 3, 7, 7]], 9, 7, 6, 1)
+# solution([[1, 1, 7, 4], [3, 2, 5, 5], [4, 3, 6, 9], [2, 6, 8, 8]], 1, 3, 7, 8)
 
 
 
