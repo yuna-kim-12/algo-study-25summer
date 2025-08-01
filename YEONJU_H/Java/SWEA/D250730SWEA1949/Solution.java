@@ -50,9 +50,11 @@ public class Solution {
 
             map = new int[N][N];
             highestH = 0;
+            maxDis = 0;
 
-            boolean[][] V = new boolean[N][N];
-            int dis = 0;
+
+            boolean[][] V;
+            int dis = 1;
             boolean isDug = false;
 
             for(int i = 0; i < N; i++) {
@@ -69,11 +71,15 @@ public class Solution {
             for(int i = 0; i < N; i++) {
                 for(int j = 0; j < N; j++) {
                     if(map[i][j] == highestH) {
+                        V = new boolean[N][N];
                         V[i][j] = true;
                         hikingDown(i,j,V,dis,isDug);
                     }
                 }
             }
+
+
+            System.out.println("#" + t + " " + maxDis);
         }
 
     }
@@ -85,22 +91,38 @@ public class Solution {
             int nc = c + dc[i];
 
             if(nr < N && nc < N && nr >= 0 && nc >= 0) {
+                if(V[nr][nc]) continue;
+
                 // 아래 쪽으로 내려가는 것을 찾아서 땅을 파지 않을 경우
-                if(map[nr][nc] < map[r][c] && !V[nr][nc]) {
+                if(map[nr][nc] < map[r][c] ) {
                     V[nr][nc] = true;
+
                     hikingDown(nr,nc,V,dis + 1, isDug);
                     V[nr][nc] = false;
                 }
 
                 // 땅을 팔 경우
-                if(map[nr][nc] > map[r][c] && map[nr][nc] - K < map[r][c] && !V[nr][nc] && !isDug) {
-                    V[nr][nc] = true;
-                    map[nr][nc] = map[nr][nc] - K;
-                    isDug = true;
-                    hikingDown(nr,nc,V,dis + 1, isDug);
-                    map[nr][nc] = map[nr][nc] + K;
-                    V[nr][nc] = false;
+                int k = 1;
+                while(true) {
+                    if(k > K) {
+                        break;
+                    }
+
+                    if(map[nr][nc] >= map[r][c] && map[nr][nc] - k < map[r][c] && !isDug) {
+//                        System.out.println("땅 파고 " + nr + "," + nc + "로 이동/" + dis + "/ 땅판 높이 : " + (map[nr][nc] - k) );
+                        V[nr][nc] = true;
+                        isDug = true;
+                        map[nr][nc] = map[nr][nc] - k;
+                        hikingDown(nr,nc,V,dis + 1, isDug);
+
+                        map[nr][nc] = map[nr][nc] + k;
+                        isDug = false;
+                        V[nr][nc] = false;
+                        break;
+                    }
+                    k++;
                 }
+
                 // 가지도, 땅파지도 않을 경우 -> 아무일도 안일어남
             }
         }
