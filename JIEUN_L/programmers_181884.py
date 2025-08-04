@@ -1,8 +1,7 @@
 def solution(numbers, n):
     answer = 0
-    for i in range(n) :
-        if answer <=  n : 
-            answer += numbers[i]
-        else : break 
-
+    for i in range(len(numbers)) :
+        answer += numbers[i]
+        if answer >  n : 
+            return answer
     return answer
