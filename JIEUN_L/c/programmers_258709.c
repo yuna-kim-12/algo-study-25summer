@@ -6,6 +6,8 @@
 // 1.일단 expectation이 가장 높은 쪽의 숫자를 고르는게 맞다. 
 // 2. 따라서 for 문으로 가장 exp 를 게산하도록 하자! 
 
+int compare(const void* a, const void* b)
+
 // dice_rows는 2차원 배열 dice의 행 길이, dice_cols는 2차원 배열 dice의 열 길이입니다.
 int* solution(int** dice, size_t dice_rows, size_t dice_cols) {
     // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
@@ -28,7 +30,7 @@ int* solution(int** dice, size_t dice_rows, size_t dice_cols) {
         temp_arr[i][1] = i;
     }
     // 이제 여기서 q sort 를 하면 될듯?
-    
+    qsort(temp_arr, dice_rows, sizeof(int*),  )
 
     return answer;
 }
