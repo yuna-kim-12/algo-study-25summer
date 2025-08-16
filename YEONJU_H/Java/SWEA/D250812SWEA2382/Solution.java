@@ -5,21 +5,17 @@ import java.io.*;
 
 class Mic {
     int r,c,nums,dir;
-
     Mic(int r, int c, int nums, int dir) {
         this.r = r;
         this.c = c;
         this.nums = nums;
         this.dir = dir;
     }
-
 }
-
 
 public class Solution {
 
     static int N,M,K;
-    static int[][] map;
     static List<Mic> mics;
     static int[] dr = {0,-1,1,0,0};
     static int[] dc = {0,0,0,-1,1};
@@ -68,8 +64,8 @@ public class Solution {
 
             for(int i = 0; i < K; i++) {
                 st = new StringTokenizer(br.readLine());
-                int c = Integer.parseInt(st.nextToken());
                 int r = Integer.parseInt(st.nextToken());
+                int c = Integer.parseInt(st.nextToken());
                 int nums = Integer.parseInt(st.nextToken());
                 int dir = Integer.parseInt(st.nextToken());
                 mics.add(new Mic(r,c,nums,dir));
@@ -95,9 +91,6 @@ public class Solution {
 
         }
 
-
-
-
     }
     public static void moveMics() {
 
@@ -120,7 +113,7 @@ public class Solution {
             if(mic.r == 0 || mic.c == 0 || mic.r == N - 1 || mic.c == N - 1) {
                 int tmp = mic.nums;
                 mic.nums = (int) tmp / 2;
-                System.out.println("tmp : " + tmp + " " + "mic.nums" + " " + mic.nums);
+//                System.out.println("tmp : " + tmp + " " + "mic.nums" + " " + mic.nums);
 
                 int tmp2 = mic.dir;
                 switch(tmp2) {
@@ -171,8 +164,6 @@ public class Solution {
         }
 
     }
-
-
 
 
 }
