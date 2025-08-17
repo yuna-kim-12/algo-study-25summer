@@ -38,7 +38,7 @@ int solution(int** points, size_t points_rows, size_t points_cols, int** routes,
     root = (int*)malloc(sizeof(int)*10000); // 이거 size of 를 일케 잡긴 했는데 숫자를 좀 더 줄일 수 있나 생각해봐야 함.....
 
     for(int i=0;i<routes_rows; i++){
-        if 
+        if  // 아니 근데 로봇 번호를 신경을 안쓸수가 없는게 열을 어케암.
     }
 
     return answer;
