@@ -4,6 +4,7 @@ def solution(nums):
     nums = set(nums)
     length = len(nums)
     if length >= allowed :
+        a = divmod(2, 4)
         return allowed
     else : 
         return length
