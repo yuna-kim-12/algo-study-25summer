@@ -13,7 +13,7 @@ char** solution(const char* quiz[], size_t quiz_len) {
     int start = 0;
     for(int i=1; i<quiz_len; i++){
         if(operator == NULL & !isdigit(quiz[i])){
-            operator = quiz[i]
+            operator = quiz[i];
         }
     }
     return answer;
