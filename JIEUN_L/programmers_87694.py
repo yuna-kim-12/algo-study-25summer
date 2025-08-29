@@ -13,56 +13,73 @@
 
 
 from collections import deque
-def make_map(rectangle) : 
-    base_map = [[-1 for _ in range(50)] for _ in range(50)]
-    for i in range(len(rectangle)) : 
-        for j in range(rectangle[i][1],rectangle[i][3]+1 ) :
-            for k in range(rectangle[i][0],rectangle[i][2]+1) : 
 
-                if j == rectangle[i][1] or j==rectangle[i][3] or k==rectangle[i][0]or k==rectangle[i][2] : 
-                    if base_map[j][k]  == 0 :
-                        pass
-                    else : 
-                        base_map[j][k] = 1
-                else : 
-                    base_map[j][k] = 0
-        # # 디버깅 용 프린트 문
-        # for i in range(0,50) : 
-        #     for j in range(0,50) : 
-        #         print(base_map[i][j], end="")
-        #     print()
-        # print()
-        # print()
-
-    return base_map
 def debug_map(base_map) : 
     # # 디버깅 용 프린트 문
-    for i in range(0,50) : 
-        for j in range(0,50) : 
-            print(base_map[i][j], end="")
+    for i in range(0,100) : 
+        for j in range(0,100) : 
+            print(base_map[i][j], end=" ")
         print()
     print()
     print()
     
     return 
 
+def make_map(rectangle) : 
+    base_map = [[-1 for _ in range(100)] for _ in range(100)]
+    rectangle = [[r*2 for r in rectangle[i]] for i in range(len(rectangle))]
+    # print(rectangle)
+
+    for i in range(len(rectangle)) : 
+        for j in range(rectangle[i][0],rectangle[i][2]+1 ) :
+            for k in range(rectangle[i][1],rectangle[i][3]+1) : 
+                if k == rectangle[i][1] or k==rectangle[i][3] or j==rectangle[i][0]or j==rectangle[i][2] : 
+                    # 기존 맵이 -1인 경우 & 사각형 엣지 부분인 경우에만 1로 변경 
+                #     if base_map[j][k]  == -1 :
+                #         base_map[j][k]  = 1
+                # else :
+                #     # 사각형 내부를 그리는데 0이다? 그럼 냅둠 아니면 싹 다 0으로 바꾸자구
+                #     if base_map[j][k] == 0 : 
+                #         pass
+                #     else : 
+                #         base_map[j][k] == 0
+                    # 기존 맵이 -1인 경우 & 사각형 엣지 부분인 경우에만 1로 변경 
+                    if base_map[j][k]  == -1 :
+                        base_map[j][k]  = 1
+                    # 사각형 내부를 그리는데 0이다? 그럼 냅둠 아니면 싹 다 0으로 바꾸자구
+                elif base_map[j][k] != 0 : 
+                    base_map[j][k] = 0
+
+    return base_map
+
+
+"""
+if k == rectangle[i][1] or k==rectangle[i][3] or j==rectangle[i][0]or j==rectangle[i][2] : 
+                    # 기존 맵이 -1인 경우 & 사각형 엣지 부분인 경우에만 1로 변경 
+                    if base_map[j][k]  == -1 :
+                        base_map[j][k]  = 1
+                    # 사각형 내부를 그리는데 0이다? 그럼 냅둠 아니면 싹 다 0으로 바꾸자구
+                elif base_map[j][k] != 0 : 
+                    base_map[j][k] = 0
+"""
+
 
 def BFS(base_map,characterX, characterY, itemX, itemY) : 
+    characterX, characterY, itemX, itemY = characterX*2, characterY*2, itemX*2, itemY*2 
     q = deque([(characterY, characterX)])
     base_map[characterY][characterX] = 2
-    # print(q)
     direction = ((0, 1), (1, 0),(-1, 0), (0, -1))
     while q : 
         current = q.popleft()
-        # print(current)
         if current[0] == itemY and current[1] == itemX :
             # print("we Fouuuuuuund!!!")
-            return base_map[itemY][itemX] 
+            print(base_map[itemY][itemX])
+            return base_map[itemY][itemX] -2
         for dir in direction : 
             next_y = current[0] + dir[0]  # Y 좌표로 수정
             next_x = current[1] + dir[1]  # X 좌표로 수정
             # print(f"next_y, next_x, basemap = {next_y}, {next_x}, {base_map[next_y][next_x]}")
-            if next_y >= 0 and next_y <= 49 and next_x >= 0 and next_x <= 49 and base_map[next_y][next_x] == 1 :
+            if next_y >= 0 and next_y <= 99 and next_x >= 0 and next_x <= 99 and base_map[next_y][next_x] == 1 :
                 base_map[next_y][next_x] = base_map[current[0]][current[1]]+1
                 # print(f"next_y, next_x = {next_y}, {next_x}")
                 q.append((next_y, next_x))
@@ -71,12 +88,10 @@ def BFS(base_map,characterX, characterY, itemX, itemY) :
 def solution(rectangle, characterX, characterY, itemX, itemY):
     answer = 0
     map = make_map(rectangle)
-    # debug_map(map)
-    # print(map)
     answer = BFS(map,characterX, characterY, itemX, itemY)
-    # debug_map(map)
-    # print(answer)
-    return answer-2
+    debug_map(map)
+    answer = answer//2
+    return answer
 
 # 우하x 좌하y 우상x 우상 y
 solution([[1, 1, 8, 4], [2, 2, 4, 9], [3, 6, 9, 8], [6, 3, 7, 7]], 9, 7, 6, 1)
