@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2c7508e-51f1-4e7c-861e-b8dfa37d92dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/YUNHA_K/SQL/pgs_157340.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,29 +34,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.boj_10816.executor": "Run",
-    "Python.boj_10828.executor": "Run",
-    "Python.boj_1181.executor": "Run",
-    "Python.boj_2606.executor": "Run",
-    "Python.boj_2644.executor": "Run",
-    "Python.boj_2667.executor": "Run",
-    "Python.boj_2839.executor": "Run",
-    "Python.pgs_42576.executor": "Run",
-    "Python.pgs_43105.executor": "Run",
-    "Python.swea_보급로.executor": "Run",
-    "Python.swea_최소 신장.executor": "Run",
-    "Python.swea_하나로.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "yunha",
-    "last_opened_file_path": "C:/Users/yoonh/OneDrive/바탕 화면/algo-study-25summer/YUNHA_K/stack/boj_10828.py",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "two.files.diff.last.used.file": "C:/Users/yoonh/OneDrive/바탕 화면/algo-study-25summer/YUNHA_K/stack/boj_10828.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.boj_10816.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_10828.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_1181.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2606.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2644.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2667.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2839.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pgs_42576.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pgs_43105.executor&quot;: &quot;Run&quot;,
+    &quot;Python.swea_보급로.executor&quot;: &quot;Run&quot;,
+    &quot;Python.swea_최소 신장.executor&quot;: &quot;Run&quot;,
+    &quot;Python.swea_하나로.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;yunha&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yoonh/OneDrive/바탕 화면/algo-study-25summer/YUNHA_K/stack/boj_10828.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/yoonh/OneDrive/바탕 화면/algo-study-25summer/YUNHA_K/stack/boj_10828.py&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.boj_1181">
     <configuration name="boj_10816" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
