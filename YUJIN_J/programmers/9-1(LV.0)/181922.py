@@ -1,3 +1,5 @@
+# 수열과 구간 쿼리 4
+
 def solution(arr, queries):
     answer = []
     for s, e, k in queries:
