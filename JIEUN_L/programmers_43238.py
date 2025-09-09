@@ -37,6 +37,7 @@ def solution(n, times):
     # 여기서 이제 양쪽으로 탐색해가는거지.
     
     while counter_1 >= 2  : 
+        counter +=1 
         pass
         
 
