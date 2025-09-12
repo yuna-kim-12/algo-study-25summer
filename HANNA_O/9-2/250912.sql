@@ -1,0 +1,11 @@
+-- programmers 경기도에 위치한 식품창고 목록 출력하기 (IS NULL)
+
+SELECT
+    WAREHOUSE_ID,
+    WAREHOUSE_NAME,
+    ADDRESS,
+    COALESCE(FREEZER_YN, 'N') AS FREEZE_YN -- 컬럼 값이 NULL이면 'N'으로 대체하기
+FROM FOOD_WAREHOUSE
+WHERE
+    ADDRESS LIKE '경기도%'
+ORDER BY WAREHOUSE_ID ASC;
