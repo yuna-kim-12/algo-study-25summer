@@ -260,7 +260,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/YUNHA_K/graph/boj_1916.py</url>
-          <line>37</line>
+          <line>40</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
