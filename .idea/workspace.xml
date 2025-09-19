@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2c7508e-51f1-4e7c-861e-b8dfa37d92dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/YUNHA_K/graph/boj_1916.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YUNHA_K/graph/boj_11779.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +41,7 @@
     "Python.boj_10828.executor": "Run",
     "Python.boj_10845.executor": "Run",
     "Python.boj_11444.executor": "Run",
+    "Python.boj_11779.executor": "Run",
     "Python.boj_1181.executor": "Run",
     "Python.boj_12865.executor": "Run",
     "Python.boj_14681.executor": "Run",
@@ -76,7 +77,29 @@
       <recent name="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\dp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.boj_1916">
+  <component name="RunManager" selected="Python.boj_11779">
+    <configuration name="boj_11779" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="algo-study-25summer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YUNHA_K/graph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/graph/boj_11779.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="boj_12865" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
       <option name="ENV_FILES" value="" />
@@ -143,28 +166,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="boj_2206" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="algo-study-25summer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YUNHA_K/DFS,BFS" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/DFS,BFS/boj_2206.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="boj_9663" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
       <option name="ENV_FILES" value="" />
@@ -189,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.boj_11779" />
         <item itemvalue="Python.boj_1916" />
         <item itemvalue="Python.boj_12865" />
         <item itemvalue="Python.boj_14681" />
         <item itemvalue="Python.boj_9663" />
-        <item itemvalue="Python.boj_2206" />
       </list>
     </recent_temporary>
   </component>
@@ -263,12 +264,12 @@
           <line>40</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/YUNHA_K/graph/boj_11779.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="parent" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
