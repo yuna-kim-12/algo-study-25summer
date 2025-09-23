@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2c7508e-51f1-4e7c-861e-b8dfa37d92dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/YUNHA_K/graph/boj_1916.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YUNHA_K/DFS,BFS/boj_1931.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,16 +37,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.boj_1043.executor": "Run",
     "Python.boj_10816.executor": "Run",
     "Python.boj_10828.executor": "Run",
     "Python.boj_10845.executor": "Run",
     "Python.boj_11444.executor": "Run",
+    "Python.boj_11779.executor": "Run",
     "Python.boj_1181.executor": "Run",
     "Python.boj_12865.executor": "Run",
     "Python.boj_14681.executor": "Run",
     "Python.boj_1753.executor": "Run",
     "Python.boj_1874.executor": "Run",
     "Python.boj_1916.executor": "Debug",
+    "Python.boj_1931.executor": "Run",
     "Python.boj_1966.executor": "Run",
     "Python.boj_2108.executor": "Run",
     "Python.boj_2206.executor": "Run",
@@ -58,11 +61,13 @@
     "Python.boj_7569.executor": "Run",
     "Python.boj_7576.executor": "Run",
     "Python.boj_9663.executor": "Run",
+    "Python.d.executor": "Run",
     "Python.pgs_42576.executor": "Run",
     "Python.pgs_43105.executor": "Run",
     "Python.swea_보급로.executor": "Run",
     "Python.swea_최소 신장.executor": "Run",
     "Python.swea_하나로.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "yunha",
@@ -73,11 +78,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\graph" />
+      <recent name="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\implementation" />
       <recent name="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\dp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.boj_1916">
-    <configuration name="boj_12865" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="boj_1043" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,11 +93,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YUNHA_K/greedy" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YUNHA_K" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\dp\boj_12865.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\graph\boj_1043.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -99,29 +106,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="boj_14681" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="algo-study-25summer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YUNHA_K/implementation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/implementation/boj_14681.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="boj_1916" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="boj_11779" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,7 +119,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/graph/boj_1916.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/graph/boj_11779.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,7 +128,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="boj_2206" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="boj_1920" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="algo-study-25summer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\implementation\boj_1920.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="boj_1931" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,7 +163,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/DFS,BFS/boj_2206.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/DFS,BFS/boj_1931.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,7 +172,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="boj_9663" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,11 +181,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YUNHA_K/DFS,BFS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YUNHA_K" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/DFS,BFS/boj_9663.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.boj_1916" />
-        <item itemvalue="Python.boj_12865" />
-        <item itemvalue="Python.boj_14681" />
-        <item itemvalue="Python.boj_9663" />
-        <item itemvalue="Python.boj_2206" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.boj_1931" />
+        <item itemvalue="Python.boj_1043" />
+        <item itemvalue="Python.boj_1920" />
+        <item itemvalue="Python.boj_11779" />
       </list>
     </recent_temporary>
   </component>
@@ -263,12 +270,12 @@
           <line>40</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/YUNHA_K/graph/boj_11779.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="parent" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
