@@ -1,0 +1,16 @@
+# 배열 만들기 4
+
+def solution(arr):
+    stk = []
+    i = 0
+    
+    while i < len(arr):
+        if not stk:  # 스택이 비어있으면
+            stk.append(arr[i])
+            i += 1
+        elif stk[-1] < arr[i]:
+            stk.append(arr[i])
+            i += 1
+        else:  
+            stk.pop()
+    return stk
