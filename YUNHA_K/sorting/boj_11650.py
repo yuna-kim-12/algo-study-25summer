@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 N = int(input())
 spots = []
 for _ in range(N):
