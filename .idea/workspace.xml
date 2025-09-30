@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2c7508e-51f1-4e7c-861e-b8dfa37d92dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/YUNHA_K/implementation/boj_2292.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f2c7508e-51f1-4e7c-861e-b8dfa37d92dd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,49 +31,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.boj_1043.executor": "Run",
-    "Python.boj_10816.executor": "Run",
-    "Python.boj_10828.executor": "Run",
-    "Python.boj_10845.executor": "Run",
-    "Python.boj_11444.executor": "Run",
-    "Python.boj_11779.executor": "Run",
-    "Python.boj_1181.executor": "Run",
-    "Python.boj_12865.executor": "Run",
-    "Python.boj_14681.executor": "Run",
-    "Python.boj_1753.executor": "Run",
-    "Python.boj_1874.executor": "Run",
-    "Python.boj_1916.executor": "Debug",
-    "Python.boj_1931.executor": "Run",
-    "Python.boj_1966.executor": "Run",
-    "Python.boj_2108.executor": "Run",
-    "Python.boj_2206.executor": "Run",
-    "Python.boj_2292.executor": "Run",
-    "Python.boj_2606.executor": "Run",
-    "Python.boj_2644.executor": "Run",
-    "Python.boj_2667.executor": "Run",
-    "Python.boj_2839.executor": "Run",
-    "Python.boj_5430.executor": "Run",
-    "Python.boj_7569.executor": "Run",
-    "Python.boj_7576.executor": "Run",
-    "Python.boj_9663.executor": "Run",
-    "Python.d.executor": "Run",
-    "Python.pgs_42576.executor": "Run",
-    "Python.pgs_43105.executor": "Run",
-    "Python.swea_보급로.executor": "Run",
-    "Python.swea_최소 신장.executor": "Run",
-    "Python.swea_하나로.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "yunha",
-    "last_opened_file_path": "C:/Users/yoonh/OneDrive/바탕 화면/algo-study-25summer/YUNHA_K/stack/boj_10828.py",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "two.files.diff.last.used.file": "C:/Users/yoonh/OneDrive/바탕 화면/algo-study-25summer/YUNHA_K/stack/boj_10828.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.boj_1043.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_10816.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_10828.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_10845.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_11444.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_11779.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_1181.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_12865.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_14681.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_1753.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_1874.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_1916.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.boj_1931.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_1966.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2108.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2206.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2292.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2606.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2644.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2667.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_2839.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_5430.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_7569.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_7576.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boj_9663.executor&quot;: &quot;Run&quot;,
+    &quot;Python.d.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pgs_42576.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pgs_43105.executor&quot;: &quot;Run&quot;,
+    &quot;Python.swea_보급로.executor&quot;: &quot;Run&quot;,
+    &quot;Python.swea_최소 신장.executor&quot;: &quot;Run&quot;,
+    &quot;Python.swea_하나로.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;yunha&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yoonh/OneDrive/바탕 화면/algo-study-25summer/YUNHA_K/stack/boj_10828.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/yoonh/OneDrive/바탕 화면/algo-study-25summer/YUNHA_K/stack/boj_10828.py&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\graph" />
@@ -84,7 +81,7 @@
       <recent name="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\dp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.boj_2292">
+  <component name="RunManager" selected="Python.boj_11650">
     <configuration name="boj_1043" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
       <option name="ENV_FILES" value="" />
@@ -107,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="boj_1920" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="boj_11650" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algo-study-25summer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,11 +113,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YUNHA_K/implementation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\yoonh\OneDrive\바탕 화면\algo-study-25summer\YUNHA_K\implementation\boj_1920.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YUNHA_K/implementation/boj_11650.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.boj_11650" />
         <item itemvalue="Python.boj_2292" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.boj_1931" />
         <item itemvalue="Python.boj_1043" />
-        <item itemvalue="Python.boj_1920" />
       </list>
     </recent_temporary>
   </component>
