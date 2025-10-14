@@ -1,28 +1,65 @@
-from collections import deque
+# from collections import deque
+#
+# def solution(n, edge):
+#     graph = [[] for _ in range(n+1)]
+#     check = [-1] * (n+1)
+#
+#     for i, j in edge:
+#         graph[i].append(j)
+#         graph[j].append(i)
+#
+#     def BFS(node):
+#         que = deque()
+#         que.append(node)
+#         check[node] += 1
+#
+#         while que:
+#             now = que.popleft()
+#             for next in graph[now]:
+#                 if check[next] < 0:
+#                     check[next] = check[now] + 1
+#                     que.append(next)
+#         return
+#
+#     BFS(1)
+#
+#     return check.count(max(check))
+
+import heapq
 
 def solution(n, edge):
-    graph = [[] for _ in range(n+1)]
-    check = [-1] * (n+1)
+    answer = 0
+    g = [[] for _ in range(n + 1)]
+    INF = int(1e9)
+    v = [INF] * (n + 1)
 
-    for i, j in edge:
-        graph[i].append(j)
-        graph[j].append(i)
+    for i in edge:
+        a, b = i
+        g[a].append(b)
+        g[b].append(a)
 
-    def BFS(node):
-        que = deque()
-        que.append(node)
-        check[node] += 1
+    def dijkstra(start):
+        q = []
+        heapq.heappush(q,(0, start))
+        v[start] = 0
 
-        while que:
-            now = que.popleft()
-            for next in graph[now]:
-                if check[next] < 0:
-                    check[next] = check[now] + 1
-                    que.append(next)
+        while q:
+            dist, n = heapq.heappop(q)
+
+            if dist > v[n]:
+                continue
+
+            for i in g[n]:
+                cost = dist + 1
+                if cost < v[i]:
+                    v[i] = cost
+                    heapq.heappush(q, (cost, i))
         return
 
-    BFS(1)
+    dijkstra(1)
 
-    return check.count(max(check))
+    print(v)
+
+    return answer
 
 print(solution(6,[[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]))
