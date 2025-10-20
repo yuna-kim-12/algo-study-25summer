@@ -4,7 +4,7 @@ sys.stdin = open('n.txt')
 arr = input()
 a = arr.count('a')
 
-arr += arr[0:a+1]
+arr += arr
 
 count = int(1e9)
 
