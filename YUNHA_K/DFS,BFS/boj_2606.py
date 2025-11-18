@@ -1,5 +1,5 @@
 # import sys
-# def bfs(start_node, visited:list, lst:list):
+# def bfs(start_node, visited:완전탐색, lst:완전탐색):
 #     from collections import deque
 #     queue = deque([start_node])
 #     visited[start_node] = 1

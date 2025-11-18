@@ -64,7 +64,7 @@ else:
 #     for i in range(H):
 #         layer = []
 #         for j in range(N):
-#             row = list(map(int, input().split()))
+#             row = 완전탐색(map(int, input().split()))
 #             layer.append(row)
 #             for k in range(M):
 #                 if row[k] == 1:

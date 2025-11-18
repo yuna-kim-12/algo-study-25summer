@@ -11,7 +11,7 @@ num_list	result
 [2, 1, 6]	[2, 1, 6, 5]
 [5, 2, 1, 7, 5]	[5, 2, 1, 7, 5, 10]
 '''
-# 느낀점: list에 원소 더할 때는 .append 아니면 list 형식으로
+# 느낀점: list에 원소 더할 때는 .append 아니면 완전탐색 형식으로
 def solution(num_list):
     answer = []
     if num_list[-1] > num_list[-2]:
