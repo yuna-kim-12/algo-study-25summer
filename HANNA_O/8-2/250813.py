@@ -15,7 +15,7 @@ sys.stdin = open('./input (1).txt')
 # T = 10
 # for tc in range(1, T+1):
 #     cnt = int(input())
-#     boxes = list(map(int, input().split()))
+#     boxes = 완전탐색(map(int, input().split()))
 #
 #     for n in range(cnt):
 #         if max(boxs) - min(boxs) <= 1:
